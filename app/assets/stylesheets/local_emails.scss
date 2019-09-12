@@ -1,0 +1,75 @@
+// Place all the styles related to the local_emails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body .container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 970px;
+}
+.text-blue{color:#0084ff}
+.text-green{color: green;}
+.text-red{color: red;}
+.text-center{text-align: center;}
+.mbt20{margin: 20px 0;}
+.pbt10{padding:10px 0;}
+.plr10{padding: 0 10px;}
+.pd10{padding: 10px;}
+.width100{width:100%;}
+.form-control{
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.flashMessage{
+  background: #F78C79;
+}
+.btn-default{
+  color: #999 !important;
+  border: 1px solid #ccc !important;
+  background: none;
+}
+.btn-primary{
+  background-color: #0084ff;
+  color: #fff;
+  border-color: #0084ff;
+}
+.btn-danger{
+  background-color: red;
+  color: #fff;
+  border-color: red;
+}
+.text-gray{color:#999;}

@@ -1,0 +1,2 @@
+module LocalEmailsHelper
+end

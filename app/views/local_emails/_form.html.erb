@@ -1,0 +1,28 @@
+<div class="flashMessage" >
+  <% @mail.errors.each do |message_type, message| %>
+    <div class="pd10"><%= message.html_safe %></div>
+  <% end %>
+</div>
+
+<%= form_for @mail do |mail| %>
+  <div class="pbt10">
+    <label for="">发送邮箱: </label>
+    <%= mail.text_field :sender,class: "form-control", placeholder: "输入发送邮箱" %>
+  </div>
+  <div class="pbt10">
+    <label for="">接收邮箱: </label>
+    <%= mail.text_field :receiver,class: "form-control", placeholder: "输入接收邮箱" %>
+  </div>
+  <div class="pbt10">
+    <label for="">发送主题: </label>
+    <%= mail.text_field :subject,class: "form-control", placeholder: "输入发送主题" %>
+  </div>
+  <div class="pbt10">
+    <label for="">邮件内容: </label>
+    <%= mail.text_area :body, class: "width100", placeholder: "邮件内容", rows: 7 %>
+  </div>
+  <div class="mbt10">
+    <%= mail.submit "提交", class: "btn btn-primary", 'data-disable-with': "提交中..." %>
+    <%= link_to "取消", root_path, class: "btn btn-default" %>
+  </div>
+<% end %>

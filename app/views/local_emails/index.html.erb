@@ -1,0 +1,25 @@
+<div class="mbt20">
+  <%= link_to "创建新的邮件",new_local_email_path, class: "btn btn-primary" %>
+</div>
+<div class="mbt20">
+  <% @mails.find_each do |mail| %>
+  <div class="pbt10">
+    <%= link_to mail.subject, mail %>
+    <span class="plr10">
+      <%= link_to "编辑", edit_local_email_path(mail), class: "text-gray" %>
+    </span>
+    <span>
+      <%= link_to "删除", local_email_path(mail), method: :delete, class: "text-gray", data: {confirm: "确认删除吗？"} %>
+    </span>
+    <span class="plr10">
+      <% if mail.is_send == 1 %>
+        <%= link_to "已发送", "javascript:void(0)", class: "text-green" %>
+      <% elsif mail.is_send == 2 %>
+        <%= link_to "发送失败", send_mail_local_email_path(mail), method: :post, class: "text-red" %>
+      <% else %>
+        <%= link_to "立即发送", send_mail_local_email_path(mail), method: :post, class: "text-blue" %>
+      <% end %>
+    </span>
+  </div>
+  <% end %>
+</div>
