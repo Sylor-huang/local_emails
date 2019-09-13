@@ -36,7 +36,8 @@ class LocalEmailsController < ApplicationController
   def update
     ActiveRecord::Base.transaction do
       begin
-        if @mail.update_attributes(mail_params)
+        #编辑后，应设置为未发送状态
+        if @mail.update_attributes(mail_params.merge(is_send: 0))
           redirect_to @mail
         else
           render :edit
